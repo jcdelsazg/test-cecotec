@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProductsList = () => {
+const ProductsList = props => {
   const classes = useStyles();
 
   const [products, setProducts] = useState([]);
@@ -46,6 +46,14 @@ const ProductsList = () => {
         setProducts(newProducts);
       });
   }, []);
+
+  const handleDeleteProduct = id => {
+    firebase
+      .firestore()
+      .collection('products')
+      .doc(id)
+      .delete();
+  };
 
   return (
     <Paper className={classes.root}>
@@ -71,6 +79,7 @@ const ProductsList = () => {
                   className={classes.button}
                   size="small"
                   aria-label="Delete"
+                  onClick={() => handleDeleteProduct(product.id)}
                 >
                   <DeleteIcon />
                 </IconButton>
@@ -78,6 +87,7 @@ const ProductsList = () => {
                   className={classes.button}
                   size="small"
                   aria-label="Edit"
+                  onClick={() => props.editRow(product)}
                 >
                   <EditIcon />
                 </IconButton>
