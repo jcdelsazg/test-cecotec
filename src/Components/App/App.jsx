@@ -18,9 +18,20 @@ function App() {
       stock: product.stock
     });
   };
+
+  const handleLogout = event => {
+    event.preventDefault();
+    localStorage.removeItem('logged');
+    window.location = '/';
+  };
   return (
     <div className="container">
-      <h1>CRUD Products</h1>
+      <div className="flex-row">
+        <h1>CRUD Products</h1>
+        <button className="logout" onClick={handleLogout}>
+          Logout
+        </button>
+      </div>
       <div className="flex-row">
         <div className="flex-large">
           {editing ? (
