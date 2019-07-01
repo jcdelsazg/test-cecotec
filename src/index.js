@@ -4,7 +4,11 @@ import './index.css';
 import App from './Components/App/';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+if (localStorage.getItem('logged')) {
+  ReactDOM.render(<App />, document.getElementById('root'));
+} else {
+  window.location = '/login.html';
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
