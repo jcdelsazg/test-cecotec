@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import AddProduct from '../AddProduct/';
+import ProductsList from '../ProductsList/';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         </div>
         <div className="flex-large">
           <h2>View Products</h2>
+          <ProductsList />
         </div>
       </div>
     </div>
