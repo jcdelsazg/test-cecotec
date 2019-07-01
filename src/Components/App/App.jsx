@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import AddProduct from '../AddProduct/';
 import ProductsList from '../ProductsList/';
+import EditProduct from '../EditProduct/';
 
 function App() {
+  const [editing, setEditing] = useState(false);
+  const initialFormState = { id: '', name: '', prize: '', stock: '' };
+  const [currentProduct, setCurrentProduct] = useState(initialFormState);
+  const editRow = product => {
+    setEditing(true);
+
+    setCurrentProduct({
+      id: product.id,
+      name: product.name,
+      prize: product.prize,
+      stock: product.stock
+    });
+  };
   return (
     <div className="container">
       <h1>CRUD Products</h1>
       <div className="flex-row">
         <div className="flex-large">
-          <h2>Add Products</h2>
-          <AddProduct />
+          {editing ? (
+            <div>
+              <h2>Edit user</h2>
+              <EditProduct
+                editing={editing}
+                setEditing={setEditing}
+                currentProduct={currentProduct}
+              />
+            </div>
+          ) : (
+            <div>
+              <h2>Add Products</h2>
+              <AddProduct />
+            </div>
+          )}
         </div>
         <div className="flex-large">
           <h2>View Products</h2>
-          <ProductsList />
+          <ProductsList editRow={editRow} />
         </div>
       </div>
     </div>
