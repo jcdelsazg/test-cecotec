@@ -27,6 +27,8 @@ The structure of the App is the following:
 3. Assets -> This folder is for adding the different assets as images...
 4. Package.json -> In this file are the dependencies for the project
 
+In the branch master are all the functionality of the APP. In the repository all the features branch are not deleted and can clone or download too.
+
 ## Available Scripts
 
 In the project directory, you can run:
