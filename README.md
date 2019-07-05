@@ -1,4 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Test Cecotec Juan Carlos Del Saz
+
+##Usage
+
+1. Clone or download the source code
+2. Go to the folder test-cecotec open a terminal and run the command npm install
+3. Run in the terminal npm start for development environment (See the Available scripts section for more information)
+4. The user/password for enter in the app is cecotect/1234
+
+##About the App
+
+This application has been developed using React 16.8 and Firebase as a backend.
+The structure of the App is the following:
+
+1. Public -> This folder has the public HTML page and the Login in jquery
+   1. js -> source code in jquery for managing the login
+   2. css -> css for the login using flexbox
+   3. login.html -> HTML page for the login in jquery
+2. src -> Source code of the app
+   1. Components -> Folder contains the components
+      1. AddProduct -> The component for adding products
+      2. App -> The main page for the App
+      3. EditProduct -> The component for managing the edit products
+      4. ProductList -> The component for managing the list of products
+   2. Firebase.js -> This is the configuration for the firebase DB
+   3. Index -> This file is in charge of loading the react part of the app
+3. Assets -> This folder is for adding the different assets as images...
+4. Package.json -> In this file are the dependencies for the project
 
 ## Available Scripts
 
@@ -26,43 +53,3 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
